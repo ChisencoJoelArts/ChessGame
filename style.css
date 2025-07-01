@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+  background-color: gray;
+  user-select: none;
+}
+
+/* Hiding the image containing the Sprite shett of the chess pieces */
+#chess-pieces {
+  display: none;
+}
+
+/* Styling the botton */
+#changePosition {
+  background-color: aqua;
+  text-decoration: none;
+  width: 200px;
+  height: 2em;
+  font-size: 1.5em;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px black;
+}
+
+/* Chess board Styles */
+#outer-board {
+  background-color: rgb(160, 93, 48);
+  border: 5px solid black;
+  width: 660px;
+  height: 660px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.st-files-row {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nd-files-row {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.st-ranks-column {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
+.nd-ranks-column {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
+#board-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-image: url(./assets/wood-board.jpg);
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.black {
+  background-color: rgba(47, 5, 0, 0.6);
+}
+
+.white {
+  background-color: rgba(255, 177, 117, 0.1);
+}

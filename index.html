@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Game</title>
+    <!-- JavaScript -->
+    <script type="module" src="script.js" defer></script>
+    <!-- Cascading Style Sheets (CSS) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CHESS GAME</h1>
+
+    <div id="outer-board">
+      <img
+        src="./assets/chess-pieces.png"
+        id="chess-pieces"
+        alt="Chess Pieces"
+      />
+      <div class="st-files-row"></div>
+      <div class="st-ranks-column"></div>
+      <div id="board-container"></div>
+      <div class="nd-files-row"></div>
+      <div class="nd-ranks-column"></div>
+    </div>
+
+    <button id="changePosition">Change Position</button>
+  </body>
+</html>
